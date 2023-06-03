@@ -1,8 +1,8 @@
 from django.contrib import admin
 from django.urls import path
-from catalog import views
+from catalog import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='home'),
 ]
+urlpatterns = urlpatterns+urls.urlpatterns
